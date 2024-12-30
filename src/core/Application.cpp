@@ -40,7 +40,7 @@ namespace re {
 
     void Application::InternalRender() const {
         if (currentScene) {
-            currentScene->Render();
+            currentScene->InternalRender();
         }
     }
 

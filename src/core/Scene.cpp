@@ -27,7 +27,7 @@ namespace re {
         if (hud) hud->Draw();
     }
 
-    void Scene::Render() const {
+    void Scene::InternalRender() const {
         BeginDrawing();
         ClearBackground(BLACK);
 
