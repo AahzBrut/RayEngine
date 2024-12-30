@@ -15,6 +15,7 @@ namespace re {
 
         void InternalInitialize();
         void InternalUpdate(float deltaTime);
+        void InternalRender() const;
 
         Application *GetApplication() { return application; }
         const Application *GetApplication() const { return application; }
@@ -23,7 +24,6 @@ namespace re {
         Weak<HUDType> SpawnHUD(Args... args);
 
         void RenderHUD() const;
-        void InternalRender() const;
         [[nodiscard]] Vector2 GetWindowSize() const;
 
     private:
@@ -31,7 +31,7 @@ namespace re {
         bool initialized;
         Shared<HUD> hud{};
 
-        virtual void Render() {}
+        virtual void Render() const {}
         virtual void Initialize() {}
         virtual void Update(float deltaTime) {}
     };

@@ -31,6 +31,7 @@ namespace re {
         BeginDrawing();
         ClearBackground(BLACK);
 
+        Render();
         RenderHUD();
 
         EndDrawing();
